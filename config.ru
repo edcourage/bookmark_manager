@@ -1,3 +1,3 @@
 require_relative "./app"
 
-run BookMarks
+run BookmarkMgr 

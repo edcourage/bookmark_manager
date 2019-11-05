@@ -8,8 +8,6 @@ class BookmarkMgr < Sinatra::Base
   end
 
   get '/bookmarks' do
-    @bookmark_instance = Bookmarks.new
-    @string = @bookmark_instance.all
     erb :bookmarks
   end
 

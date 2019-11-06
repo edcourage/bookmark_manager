@@ -9,4 +9,10 @@ describe Bookmarks do
     end
   end
 
+  context "#add_bookmarks" do
+    it 'bookmark gets added to database' do
+      Bookmarks.add_bookmarks(url:"www.bbcnews.com")
+      expect(Bookmarks.all).to include('www.bbcnews.com')
+    end
+  end
 end

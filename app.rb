@@ -8,6 +8,7 @@ class BookmarkMgr < Sinatra::Base
   end
 
   get '/bookmarks' do
+    Bookmarks.add_bookmarks(url: params[:bookmark])
     erb :bookmarks
   end
 

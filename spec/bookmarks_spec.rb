@@ -10,7 +10,7 @@ describe Bookmarks do
 
   context "#all" do
     it "returns all the bookmarks" do
-      expect(Bookmarks.all).to eq ["http://www.makersacademy.com", "http://www.google.com", "http://www.destroyallsoftware.com"]
+      expect(Bookmarks.all).to include("http://www.makersacademy.com", "http://www.google.com", "http://www.destroyallsoftware.com")
     end
   end
 

@@ -1,10 +1,12 @@
 feature 'Adding Bookmarks' do
 
-  scenario 'add a new bookmark' do
+  scenario 'add a new bookmark url' do
     visit '/'
-    fill_in 'bookmark', with: 'www.bookmark.com'
+    fill_in 'url', with: 'www.youtube.com'
+    fill_in 'title', with: 'youtube'
     click_on 'Save Bookmark'
-    expect(page).to have_text("www.bookmark.com")
-
+    expect(page).to have_text("Title: youtube")
   end
+
+
 end

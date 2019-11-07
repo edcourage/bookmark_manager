@@ -8,12 +8,12 @@ class Bookmarks
   def self.all
     bookmarks = []
     @@database.exec("SELECT * FROM bookmarks").each do |row|
-      bookmarks << row["url"]
+      bookmarks << [row["url"], row["title"]]
     end
     bookmarks
   end
 
-  def self.add_bookmarks(url:)
-    @@database.exec("INSERT INTO bookmarks (url) VALUES ('#{url}')")
+  def self.add_bookmarks(url:, title:)
+    @@database.exec("INSERT INTO bookmarks (url, title) VALUES ('#{url}', '#{title}')")
   end
 end

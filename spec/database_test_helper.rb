@@ -8,8 +8,8 @@ end
 
 def add_bookmarks_for_test
 
-  @@con.exec("INSERT INTO bookmarks (url)
-  VALUES ('http://www.maker.com'),
-  ('http://www.youtube.com'),
-  ('http://www.facebook.com')")
+  @@con.exec("INSERT INTO bookmarks (url, title)
+  VALUES ('http://www.maker.com', 'maker'),
+  ('http://www.youtube.com', 'youtube'),
+  ('http://www.facebook.com', 'facebook')")
 end

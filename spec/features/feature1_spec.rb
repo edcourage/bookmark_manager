@@ -8,7 +8,7 @@ feature 'bookmark manager display' do
     add_bookmarks_for_test
     visit '/'
     click_on 'View Bookmarks'
-    expect(page).to have_text "http://www.maker.com"
+    expect(page).to have_text "maker"
   end
 
 

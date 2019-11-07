@@ -4,7 +4,7 @@ describe Bookmarks do
 
   context "#all" do
     it "returns all the bookmarks" do
-      add_bookmarks
+      add_bookmarks_for_test
       expect(Bookmarks.all).to include('http://www.maker.com', 'http://www.youtube.com')
     end
   end

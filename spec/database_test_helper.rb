@@ -6,7 +6,7 @@ def reset_table
   @@con.exec("TRUNCATE bookmarks")
 end
 
-def add_bookmarks
+def add_bookmarks_for_test
 
   @@con.exec("INSERT INTO bookmarks (url)
   VALUES ('http://www.maker.com'),

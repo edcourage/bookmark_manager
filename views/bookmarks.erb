@@ -1,6 +1,4 @@
 
 <%@bookmarks_array.each do |bookmarks|%>
-
-<h1>Title: <%=bookmarks.title%></h1>
-
+  <li><a href="<%=bookmarks.url%>"><%=bookmarks.title%></a></li>
 <%end%>

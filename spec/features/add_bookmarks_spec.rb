@@ -5,7 +5,7 @@ feature 'Adding Bookmarks' do
     fill_in 'url', with: 'www.youtube.com'
     fill_in 'title', with: 'youtube'
     click_on 'Save Bookmark'
-    expect(page).to have_text("Title: youtube")
+    expect(page).to have_text("youtube")
   end
 
 

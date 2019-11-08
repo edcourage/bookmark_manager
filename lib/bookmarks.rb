@@ -12,11 +12,9 @@ class Bookmarks
   end
 
   def self.all
-    bookmarks = []
-    @@database.exec("SELECT * FROM bookmarks").each do |row|
-      bookmarks << Bookmarks.new(row["url"], row["title"])
+    @@database.exec("SELECT * FROM bookmarks").map do |row|
+      Bookmarks.new(row["url"], row["title"])
     end
-    bookmarks
   end
 
   def self.add_bookmarks(url:, title:)
